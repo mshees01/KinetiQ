@@ -127,10 +127,11 @@ Include 5 meals: Breakfast, Mid-Morning Snack, Lunch, Evening Snack, Dinner.
 Use real, practical foods. Be specific with quantities (e.g. "2 boiled eggs", "1 cup oats").`;
 
     try {
-    
       const GROQ_KEY = import.meta.env.VITE_GROQ_API_KEY;
 
-      const res = await fetch("/api/groq/openai/v1/chat/completions", {
+
+      // Aise karo (CORRECT) 
+      const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
